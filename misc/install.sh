@@ -14,7 +14,7 @@ mkdir tmp
 cd tmp/
 
 echo "Install pcre"
-wget ftp://ftp.csx.cam.ac.uk/pub/software/programming/pcre/pcre-8.33.tar.gz
+wget ftp://ftp.csx.cam.ac.uk/pub/software/programming/pcre/pcre-8.33.tar.gz -O pcre-8.33.tar.gz
 tar -zxf pcre-8.33.tar.gz
 cd pcre-8.33
 ./configure \
@@ -23,15 +23,15 @@ make && make install
 cd ..
 
 echo "Install Apache httpd"
-wget http://www.gtlib.gatech.edu/pub/apache//httpd/httpd-2.4.7.tar.gz
-tar -zxf httpd-2.4.7.tar.gz
-wget http://artfiles.org/apache.org/apr/apr-1.5.0.tar.gz
-tar -zxf apr-1.5.0.tar.gz
-mv apr-1.5.0 httpd-2.4.7/srclib/apr
-wget http://artfiles.org/apache.org/apr/apr-util-1.5.3.tar.gz
+wget http://www.gtlib.gatech.edu/pub/apache//httpd/httpd-2.4.9.tar.gz -O httpd-2.4.9.tar.gz
+tar -zxf httpd-2.4.9.tar.gz
+wget http://artfiles.org/apache.org/apr/apr-1.5.1.tar.gz -O apr-1.5.1.tar.gz
+tar -zxf apr-1.5.1.tar.gz
+mv apr-1.5.1 httpd-2.4.9/srclib/apr
+wget http://artfiles.org/apache.org/apr/apr-util-1.5.3.tar.gz -O apr-util-1.5.3.tar.gz
 tar -zxf apr-util-1.5.3.tar.gz
-mv apr-util-1.5.3 httpd-2.4.7/srclib/apr-util
-cd httpd-2.4.7
+mv apr-util-1.5.3 httpd-2.4.9/srclib/apr-util
+cd httpd-2.4.9
 ./configure \
 --prefix=$OPENSHIFT_RUNTIME_DIR/srv/httpd \
 --with-included-apr \
@@ -57,7 +57,7 @@ cd ..
 #cd ../..
 
 echo "Install zlib"
-wget http://zlib.net/zlib-1.2.8.tar.gz
+wget http://zlib.net/zlib-1.2.8.tar.gz -O zlib-1.2.8.tar.gz
 tar -zxf zlib-1.2.8.tar.gz
 cd zlib-1.2.8
 ./configure \
@@ -66,7 +66,7 @@ make && make install
 cd ..
 
 echo "INSTALL PHP"
-wget http://de2.php.net/get/php-5.5.9.tar.gz/from/this/mirror
+wget http://de2.php.net/get/php-5.5.9.tar.gz/from/this/mirror -O php-5.5.9.tar.gz
 tar -zxf php-5.5.9.tar.gz
 cd php-5.5.9
 ./configure \
@@ -101,15 +101,15 @@ cd ..
 #make && make install
 #cd ..
 
-echo "Install xdebug"
-wget http://xdebug.org/files/xdebug-2.2.3.tgz
-tar -zxf xdebug-2.2.3.tgz
-cd xdebug-2.2.3
-$OPENSHIFT_RUNTIME_DIR/srv/php/bin/phpize
-./configure \
---with-php-config=$OPENSHIFT_RUNTIME_DIR/srv/php/bin/php-config
-make && cp modules/xdebug.so $OPENSHIFT_RUNTIME_DIR/srv/php/lib/php/extensions
-cd ..
+#echo "Install xdebug"
+#wget http://xdebug.org/files/xdebug-2.2.3.tgz
+#tar -zxf xdebug-2.2.3.tgz
+#cd xdebug-2.2.3
+#$OPENSHIFT_RUNTIME_DIR/srv/php/bin/phpize
+#./configure \
+#--with-php-config=$OPENSHIFT_RUNTIME_DIR/srv/php/bin/php-config
+#make && cp modules/xdebug.so $OPENSHIFT_RUNTIME_DIR/srv/php/lib/php/extensions
+#cd ..
 
 echo "Cleanup"
 rm -r $OPENSHIFT_RUNTIME_DIR/tmp/*.tar.gz
