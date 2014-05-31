@@ -6,6 +6,6 @@
     <body>
         <h1>Hi there!</h1>
         <p>Yes, it's true! On this openshift gear PHP <?php echo PHP_VERSION ?> is running.</p>
-        <p>Have phun!</p>
+        <p>Have fun!</p>
     </body>
 </html>
