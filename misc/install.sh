@@ -78,7 +78,9 @@ cd php-5.5.9
 --with-layout=PHP \
 --with-gd \
 --with-curl \
---with-mysqli \
+--with-mysql  \
+--with-mysqli=mysqlnd \
+--with-pdo-mysql=mysqlnd
 --with-openssl \
 --enable-mbstring \
 --enable-zip
