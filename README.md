@@ -1,4 +1,4 @@
-openshift-diy-php
+openshift-diy-php openatrium
 ============================
 
 This is a sample repository to get a custom PHP version running on [openshift](https://openshift.redhat.com).
