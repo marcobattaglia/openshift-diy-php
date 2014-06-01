@@ -12,13 +12,12 @@ The misc/install.sh script installs:
 
 * [Apache HTTP server](http://projects.apache.org/projects/http_server.html)
 * [PHP](http://php.net/)
-* [XDebug](http://xdebug.org)
 
 **Note** that different branches exists for ther respective PHP versions (WIP)
 
 It configures apache to have the www folder as the document root. It also
 uses the php.ini-development from the php archive and moves it into the
-correct folder.
+correct folder. Youn use it in order to set a higher memory_limit requested by openatrium.
 
 The script does not remove the source files, so you can easily recompile
 Apache or PHP. Have a look at the shell script to see with which options
@@ -48,7 +47,7 @@ To get your custom PHP version working at OpenShift, you have to do the followin
 8. Open http://appname-namespace.rhcloud.com/phpinfo.php to verify running
    apache
 9. You can remove the misc content
-
+10. www contains all opeatrium php files
 Thanks
 ------
 
@@ -56,3 +55,4 @@ Thanks to the following people (ordered by name):
 
 * [@marekjelen](https://github.com/marekjelen)
 * [@venu](https://github.com/venu)
+* [@elkuku] (https://github.com/elkuku)
