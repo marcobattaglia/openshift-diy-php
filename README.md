@@ -48,6 +48,7 @@ To get your custom PHP version working at OpenShift, you have to do the followin
    apache
 9. You can remove the misc content
 10. www contains all opeatrium php files
+
 Thanks
 ------
 
