@@ -28,9 +28,9 @@ tar -zxf httpd-2.4.10.tar.gz
 wget http://artfiles.org/apache.org/apr/apr-1.5.1.tar.gz -O apr-1.5.1.tar.gz
 tar -zxf apr-1.5.1.tar.gz
 mv apr-1.5.1 httpd-2.4.10/srclib/apr
-wget http://artfiles.org/apache.org/apr/apr-util-1.5.3.tar.gz -O apr-util-1.5.3.tar.gz
-tar -zxf apr-util-1.5.3.tar.gz
-mv apr-util-1.5.3 httpd-2.4.10/srclib/apr-util
+wget http://artfiles.org/apache.org/apr/apr-util-1.5.4.tar.gz -O apr-util-1.5.4.tar.gz
+tar -zxf apr-util-1.5.4.tar.gz
+mv apr-util-1.5.4 httpd-2.4.10/srclib/apr-util
 cd httpd-2.4.10
 ./configure \
 --prefix=$OPENSHIFT_RUNTIME_DIR/srv/httpd \
