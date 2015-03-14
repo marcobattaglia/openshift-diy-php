@@ -14,9 +14,9 @@ mkdir tmp
 cd tmp/
 
 echo "Install pcre"
-wget ftp://ftp.csx.cam.ac.uk/pub/software/programming/pcre/pcre-8.33.tar.gz -O pcre-8.33.tar.gz
-tar -zxf pcre-8.33.tar.gz
-cd pcre-8.33
+wget ftp://ftp.csx.cam.ac.uk/pub/software/programming/pcre/pcre-8.35.tar.gz -O pcre-8.35.tar.gz
+tar -zxf pcre-8.35.tar.gz
+cd pcre-8.35
 ./configure \
 --prefix=$OPENSHIFT_RUNTIME_DIR/srv/pcre
 make && make install
